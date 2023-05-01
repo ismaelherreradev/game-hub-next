@@ -1,0 +1,29 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "css.lint.unknownAtRules": "ignore",
+  "prettier.printWidth": 120,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "typescript.tsdk": "node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
