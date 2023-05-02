@@ -1,13 +1,13 @@
 import GameCard from '@/components/ui/game-card';
 import { getBaseUrl } from '@/lib/utils';
-import type { Games } from '@/types';
+import type { Games } from '@/types/games';
 
 export const runtime = 'experimental-edge';
 
 export default async function GameContainer() {
   const {
     games: { results },
-  }: Games = await fetch(`${getBaseUrl()}/api`).then((res) => res.json());
+  }: Games = await fetch(`${getBaseUrl()}/api/games`).then((res) => res.json());
 
   return (
     <section className='container'>
