@@ -10,7 +10,7 @@ export default async function GenresContainer() {
   }: Genres = await fetch(`${getBaseUrl()}/api/genres`).then((res) => res.json());
 
   return (
-    <aside className='pl-4'>
+    <aside className=''>
       <h2 className='text-2xl font-semibold text-white'>Genres</h2>
       <ul>
         {results.map((genre) => (

@@ -10,8 +10,8 @@ export default async function GameContainer() {
   }: Games = await fetch(`${getBaseUrl()}/api/games`).then((res) => res.json());
 
   return (
-    <section className='container'>
-      <div className='grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4'>
+    <section className=''>
+      <div className='grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-8 xl:grid-cols-5'>
         {results.map((game) => (
           <GameCard key={game.id} game={game} />
         ))}
