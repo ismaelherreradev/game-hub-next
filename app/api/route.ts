@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 
 import type { Games } from '@/types';
 
-export const runtime = 'edge';
 export const revalidate = 60;
 
 export async function GET() {
