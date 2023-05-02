@@ -5,11 +5,9 @@ export default async function Home() {
 
   const b = await a.json();
 
-  console.log(b);
-
   return (
     <main>
-      <pre>{JSON.stringify(b, null, 2)}</pre>
+      <pre>{JSON.stringify(b.games.results, null, 2)}</pre>
     </main>
   );
 }
