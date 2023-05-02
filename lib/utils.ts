@@ -3,7 +3,9 @@ import { cache } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export const getBaseUrl = cache(() =>
-  process.env.VERCEL_URL ? `game-hub-next-ismaelherreradev.vercel.app` : `http://localhost:${process.env.PORT ?? 3000}`
+  process.env.VERCEL_URL
+    ? `https://game-hub-next-ismaelherreradev.vercel.app/`
+    : `http://localhost:${process.env.PORT ?? 3000}`
 );
 
 export function cn(...inputs: ClassValue[]) {
