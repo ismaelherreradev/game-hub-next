@@ -5,7 +5,7 @@ import { FaAndroid, FaApple, FaLinux, FaPlaystation, FaWindows, FaXbox } from 'r
 import { MdPhoneIphone } from 'react-icons/md';
 import { SiNintendo } from 'react-icons/si';
 
-import type { ParentPlatform } from '@/types';
+import type { ParentPlatform } from '@/types/games';
 
 const iconMap: Record<string, IconType> = {
   pc: FaWindows,
