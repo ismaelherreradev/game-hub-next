@@ -1,5 +1,5 @@
 import { getCroppedImageUrl } from '@/lib/utils';
-import type { Result as Game } from '@/types';
+import type { Result as Game } from '@/types/games';
 
 import BlurImage from './blur-image';
 import { Card, CardContent, CardHeader, CardTitle } from './card';
