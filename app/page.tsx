@@ -1,13 +1,21 @@
-import { getBaseUrl } from '@/lib/getBaseUrl';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { getBaseUrl } from '@/lib/utils';
+import type { Games } from '@/types';
 
 export default async function Home() {
-  const a = await fetch(`${getBaseUrl()}/api`);
-
-  const b = await a.json();
+  const {
+    games: { results },
+  }: Games = await fetch(`${getBaseUrl()}/api`).then((res) => res.json());
 
   return (
     <main>
-      <pre>{JSON.stringify(b.games.results, null, 2)}</pre>
+      {results.map((game) => (
+        <Card key={game.id}>
+          <CardHeader>
+            <CardTitle>{game.name}</CardTitle>
+          </CardHeader>
+        </Card>
+      ))}
     </main>
   );
 }
