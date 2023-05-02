@@ -14,7 +14,7 @@ export default function BlurImage({ image, alt, width, height }: BlurImageProps)
   const [isLoading, setLoading] = useState(true);
 
   return (
-    <div className='overflow-hidden rounded-t-lg bg-gray-200'>
+    <div className='overflow-hidden rounded-t-xl'>
       <Image
         alt={alt}
         src={image}
@@ -22,7 +22,7 @@ export default function BlurImage({ image, alt, width, height }: BlurImageProps)
         height={height}
         priority
         className={`
-              duration-200
+              object-cover duration-200
               ${isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'})`}
         onLoadingComplete={() => setLoading(false)}
       />

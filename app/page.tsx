@@ -8,8 +8,8 @@ export default async function Home() {
   }: Games = await fetch(`${getBaseUrl()}/api`).then((res) => res.json());
 
   return (
-    <main>
-      <div className='grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4'>
+    <main className='container'>
+      <div className='grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4'>
         {results.map((game) => (
           <GameCard key={game.id} game={game} />
         ))}
