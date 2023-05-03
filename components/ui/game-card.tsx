@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { getCroppedImageUrl } from '@/lib/utils';
 import type { Result as Game } from '@/types/games';
 
@@ -15,10 +17,12 @@ export default function GameCard({ game }: { game: Game }) {
         </div>
         <BlurImage image={getCroppedImageUrl(game.background_image)} alt={game.name} width={600} height={400} />
       </CardHeader>
-      <CardContent className='p-0'>
+      <CardContent className='relative z-50 p-0'>
         <div className='space-y-4 px-4 py-4'>
           <PlataformList plataforms={game.parent_platforms} />
-          <CardTitle className='text-xl'>{game.name}</CardTitle>
+          <Link href={`/game/${game.slug}`} className='block'>
+            <CardTitle className='text-xl'>{game.name}</CardTitle>
+          </Link>
         </div>
       </CardContent>
     </Card>

@@ -13,8 +13,8 @@ export default function RootLayout({ games, genres }: { games: React.ReactNode; 
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <main className='grid grid-flow-col'>
-          {genres}
+        <main className='container'>
+          {/* {genres} */}
           {games}
         </main>
       </body>
