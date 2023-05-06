@@ -1,8 +1,7 @@
-import GameCard from '@/components/ui/game-card';
 import { getBaseUrl } from '@/lib/utils';
 import type { Genres } from '@/types/genres';
 
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
 
 export default async function GenresContainer() {
   const {

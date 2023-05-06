@@ -1,8 +1,10 @@
 import { getBaseUrl } from '@/lib/utils';
 import { Games } from '@/types/games';
 
-export default async function page({ params }: { params: { slug: string } }) {
-  return <pre className='text-white'>{JSON.stringify(params, null, 2)}</pre>;
+export default async function page({ params }: { params: { id: string } }) {
+  const game = await fetch(`${getBaseUrl()}/game`).then((res) => res.json());
+
+  return <pre className='text-white'>{JSON.stringify(game, null, 2)}</pre>;
 }
 
 export async function generateStaticParams() {
@@ -11,6 +13,6 @@ export async function generateStaticParams() {
   }: Games = await fetch(`${getBaseUrl()}/api/games`).then((res) => res.json());
 
   return results.map((game) => ({
-    slug: game.slug,
+    id: game.id,
   }));
 }

@@ -1,12 +1,11 @@
 import { type ClassValue, clsx } from 'clsx';
-import { cache } from 'react';
+import react from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export const getBaseUrl = cache(() =>
+export const getBaseUrl = () =>
   process.env.VERCEL_URL
     ? `https://game-hub-next-ismaelherreradev.vercel.app/`
-    : `http://localhost:${process.env.PORT ?? 3000}`
-);
+    : `http://localhost:${process.env.PORT ?? 3000}`;
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
